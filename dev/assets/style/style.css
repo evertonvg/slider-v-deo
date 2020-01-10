@@ -1,0 +1,146 @@
+*{
+    outline: none;
+    transition:all 0.3s ease-out !important;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    color:white;
+    background: currentColor;
+}
+.exemplo{
+    color:#fAfAfA;
+    background: currentColor;
+    height:100vh;
+}
+.slick-videos{
+    height:600px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.slick-videos .slick-videos-item{
+    position: relative;
+    cursor:pointer;
+    /* width:25% !important; */
+    overflow: hidden;
+}
+
+.slick-videos .slick-videos-item img{
+    width: 100%;
+    height:90%;
+    transition:0.3s;
+    overflow:hidden;
+    transition:all 0.3s ease-out;
+    max-width:100%;
+    filter: grayscale(1);
+}
+
+.slick-videos .slick-videos-item i{
+    position: absolute;
+    left:42%;
+    top:35%;
+    color:white;
+    font-size:60px;
+    transition:all 0.3s ease-out;
+    
+}
+
+.slick-videos .slick-videos-item .titulo{
+    position:absolute;
+    width:0;
+    height:0;
+    background:rgba(0,0,0,0.4);
+    color:white;
+    font-size:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    bottom:0;
+    left:10%;
+    padding-left: 10px;
+    transition:all 0.3s ease-out;
+}
+.slick-videos .slick-videos-item i:hover~.titulo,
+.slick-videos .slick-videos-item img:hover~.titulo,
+.slick-videos .slick-videos-item .titulo:hover{
+    width:100%;
+    height:50px;
+    left:0;
+}
+.slick-videos .slick-videos-item:hover img{
+    filter: grayscale(0);
+    transform:scale(1.2);
+}
+
+.videoplay{
+    position:fixed;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.3);
+    border: 12px solid darkblue;
+    width: 100%;
+    height:100vh;
+    z-index:10000;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    opacity:0;
+    transition:all 0.3s ease-out;
+    
+}
+.videoplay video{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    transition:all 0.3s ease-out;
+}
+.videoplay img{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:all 0.3s ease-out;
+}
+.videoplay .tumbref{
+    position:relative;
+    transition:all 0.3s ease-out;
+    
+}
+.videoplay .tumbref:hover i{
+    transition:all 0.3s ease-out;
+}
+.videoplay .tumbref:hover i,.videoplay .tumbref:hover{
+    cursor: pointer;
+    color:gray
+}
+.videoplay .tumbref i{
+    position:absolute;
+    color:white;
+    font-size:120px;
+    top:42%;
+    left:47%;
+}
+.videoplay .tumbref .titulotumb{
+    position:absolute;
+    color:white;
+    font-size:40px;
+    top:20px;
+    left:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+
+.videoplay .X{
+    position:absolute;
+    top:10px;
+    right:30px;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+}
+
+
+
